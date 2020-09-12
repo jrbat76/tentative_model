@@ -6,9 +6,10 @@ import itertools
 import operator
 import matplotlib.pyplot as plt 
 
-
+# Available resource for the Initiator
 choice = [1, 2, 3, 4, 5]
 
+# This method returns a list that contains combinations of elements from the choice
 def createPermu(iterable):
 	l1 = []
 	for i in range(1, len(iterable) + 1):
@@ -16,7 +17,8 @@ def createPermu(iterable):
 			l1.append(j)
 	return l1
 
-def createRandomTrials(iterable, num_trials, ):
+# The method accepts iterable and number of trials as parameter and returns a list 
+def createRandomTrials(iterable, num_trials):
 	# import random
 	picked = []
 	trials = num_trials
@@ -25,6 +27,7 @@ def createRandomTrials(iterable, num_trials, ):
 		picked.append(a)
 	return picked
 
+# returns sum of the all values in dictionary
 def getSum(dict):
 	sum = 0
 	coun = 0
@@ -34,6 +37,7 @@ def getSum(dict):
 		coun += 1
 	return sum
 
+# returns weighted probability values
 def getWeighted(dict, sum):
 	weighted = {}
 	for keys, values in dict.items():
